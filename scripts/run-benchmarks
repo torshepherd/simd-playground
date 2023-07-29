@@ -1,0 +1,9 @@
+#!/bin/bash
+cd "$(dirname "$0")"/..
+
+CC=/usr/bin/gcc-12 CXX=/usr/bin/g++-12 cmake --build build
+sudo CC=/usr/bin/gcc-12 CXX=/usr/bin/g++-12 cmake --install build
+
+# ./build/any_of_benchmark --benchmark_format=csv | tee /dev/tty | python3 scripts/plot-results.py
+./build/lower_bound_benchmark --benchmark_format=csv | tee /dev/tty | python3 scripts/plot-results.py
+

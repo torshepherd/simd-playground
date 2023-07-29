@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "$(dirname "$0")"/..
+
+CC=/usr/bin/gcc-12 CXX=/usr/bin/g++-12 cmake --build build && sudo CC=/usr/bin/gcc-12 CXX=/usr/bin/g++-12 cmake --install build
+
+cd build && ctest

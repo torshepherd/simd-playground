@@ -1,0 +1,15 @@
+Diagnostics:
+  ClangTidy:
+    Add: modernize*
+  UnusedIncludes: Strict
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+
+Hover:
+  ShowAKA: No
+
+CompileFlags:
+  CompilationDatabase: build/       # Search build/ directory for compile_commands.json
